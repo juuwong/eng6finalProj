@@ -13,7 +13,7 @@ classdef dealer
             obj.deck = randperm(52);
             obj.hand = obj.deck([1,2]);
             % dealer's hand is the first two cards on the deck, always
-            % randomized
+            % randomiz
         end
         
         function checkDeck(obj)
