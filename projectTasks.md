@@ -26,5 +26,5 @@
     - Check dealer's first
         - If bust, then every player that didn't bust wins
         - No bust, then whoever is higher than dealer (without going over 21) wins
-        - If player has same as dealer, bet is returned
+        - If player has same as dealer, bet is returned to player
 
