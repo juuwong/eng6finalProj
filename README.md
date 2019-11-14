@@ -2,9 +2,10 @@
 ## Intro
 Final Project for ENG 006 at UC Davis. Card game implementation using MATLAB, in our case, Blackjack. 
 
-##Basic Blackjack Explanation
-###Goal:### Beat the dealer's hand without going over 21
-###Card Values:###
+## Basic Blackjack Explanation
+### Goal: 
+Beat the dealer's hand without going over 21
+### Card Values:
 Cards 2 - 10 worth their number value
 Face cards are worth 10 with the exception of the Ace, which can equal 10 or 1.
 
@@ -14,7 +15,7 @@ Face cards are worth 10 with the exception of the Ace, which can equal 10 or 1.
 4. Dealer acts last and *must* hit on 16 or less and stand on 17 through 21
 5. Player wins if their hand is higher than dealer's or if they have 21 or less when the dealer busts
 
-###Glossary###
+### Glossary
 **Bust:** Card's value exceeds 21
 **Stand:** Keep your cards and end your turn
 **Hit:** Ask for another card
