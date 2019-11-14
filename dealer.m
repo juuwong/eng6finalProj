@@ -10,7 +10,7 @@ classdef dealer
     methods
         % Constructor
         function obj = dealer
-            obj.deck = [1:1:52];
+            obj.deck = randperm(52);
             obj.hand = [];
         end
         
@@ -20,6 +20,20 @@ classdef dealer
         
         function checkHand(obj)
             disp(obj.hand)
+        end
+        
+        % First two cards
+        function dealHand(obj)
+            
+        end
+        
+        % Give out one card
+        function dealCard(obj)
+            
+        end
+        
+        %Dealer checks if all players are done
+        function checkStatus(obj)
         end
         
     end
