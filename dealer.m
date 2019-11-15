@@ -10,16 +10,18 @@ classdef dealer
     methods
         % Constructor
         function obj = dealer
-            obj.deck = randperm(52);
+            obj.deck = randperm(52); % maybe this should be at 
             obj.hand = obj.deck([1,2]);
             % dealer's hand is the first two cards on the deck, always
             % randomized
         end
         
+        % Just for testing purposes, checking if deck initialized properly
         function checkDeck(obj)
             disp(obj.deck)
         end
         
+        % Check both cards, initially one of the dealer's hands is hidden 
         function checkHand(obj)
             disp(obj.hand)
         end

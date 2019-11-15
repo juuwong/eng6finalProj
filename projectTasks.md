@@ -13,7 +13,7 @@
     - Struct property of Dealer object
     - Shuffle is a method of Dealer
 2. Each player dealt 2 cards as well as the dealer
-    - Dealer has one card face up
+    - Each player and dealer have one card down and one card up 
     - Each player is an object while their hand is a property
 3. Players choose between hitting, standing, ~~doubling down, or splitting~~
     - If choose Hit then dealer gives another card
