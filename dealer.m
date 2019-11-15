@@ -19,6 +19,7 @@ classdef dealer
         % Just for testing purposes, checking if deck initialized properly
         function checkDeck(obj)
             disp(obj.deck)
+            noRepeats=length(unique(obj.deck)) %This code Zach wrote, its unecessary but just checked that no repeats
         end
         
         % Check both cards, initially one of the dealer's hands is hidden 
@@ -26,9 +27,14 @@ classdef dealer
             disp(obj.hand)
         end
         
-        % First two cards to players
+        % First two cards to players    -yo so I assigned the next 4 cards to the players
         function dealHand(obj)
-            
+        if numPlayers=2
+      
+            player1Hand=obj.deck([3,4])     % created some variables
+            player2Hand=obj.deck([5,6])
+        else
+            player1Hand=obj.deck([3,4])
         end
         
         % Give out one card to player who wants card
