@@ -24,17 +24,17 @@ classdef dealer
             disp(obj.hand)
         end
         
-        % First two cards
+        % First two cards to players
         function dealHand(obj)
             
         end
         
-        % Give out one card
+        % Give out one card to player who wants card
         function dealCard(obj)
             
         end
         
-        %Dealer checks if all players are done
+        % Dealer checks if all players are done
         function checkStatus(obj)
         end
         
