@@ -1,4 +1,4 @@
-% ENG 006 - Final Project
+ % ENG 006 - Final Project
 % Dealer class
 
 classdef dealer
