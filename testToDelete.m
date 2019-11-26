@@ -1,4 +1,4 @@
-function getCards(app)
+function testToDelete(app)
     imagefiles = dir('*.png');      
     nfiles = length(imagefiles); 
     for ii=1:nfiles
@@ -6,5 +6,4 @@ function getCards(app)
        app.imgFileNames{ii} = char(currentfilename);
     end
     
-    % app.Image.ImageSource = app.imgFileNames{1};
 end
