@@ -1,4 +1,8 @@
 function cardDeck(app)
-testVar1 = 7;
-testVar2 = 2;
+if(testA < 3)
+app.img = "cardPhotos/2_of_clubs.png";
+elseif(testA > 3)
+app.img = "cardPhotos/2_of_diamonds.png";
+end
+app.Image.ImageSource = app.img;  
 end
