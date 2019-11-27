@@ -10,5 +10,4 @@ v = [10 2 3 4 5 6 7 8 9 1 10 10 10];
 cardValue = repelem(v,4);
 cards = [cardId', cardValue', "cardPhotos/" + string(imgFileNames)'];
 
-
-
+shuffledCards = cards(randperm(size(cards, 1)), :);
