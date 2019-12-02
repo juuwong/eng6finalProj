@@ -1,7 +1,5 @@
 function hit(app) 
-if(app.numPlayers == 1)
-    app.Image3.ImageSource = app.shuffledCards{4,3};
-elseif(app.numPlayers == 2)
-    app.Image3.ImageSource = app.shuffledCards{6,3};
-end
+app.Image3.ImageSource = app.shuffledCards{app.numCardsDealt + 1,3};
+app.Label.Text = num2str(str2double(app.Label.Text) + str2double(app.shuffledCards{app.numCardsDealt + 1,2}));
+app.Image3.Visible = 'on';
 end
