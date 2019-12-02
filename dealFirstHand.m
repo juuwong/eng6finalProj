@@ -23,5 +23,6 @@ elseif(app.numPlayers == 2)
     app.Image2_2.ImageSource = app.shuffledCards{5,3};
     app.Label_2.Text = num2str(str2double(app.shuffledCards{4,2}) + str2double(app.shuffledCards{5,2}));
     app.numCardsDealt = app.numCardsDealt + 5;
+    app.player2Hand = 2; % registering that player 2's hand has 2 cards
 end
 end
