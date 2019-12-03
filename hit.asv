@@ -1,6 +1,13 @@
 function hit(app) 
-
 app.numCardsDealt = app.numCardsDealt + 1;
 app.Label.Text = num2str(str2double(app.Label.Text) + str2double(app.shuffledCards{app.numCardsDealt,2}));%updates score
 
+app.player1score = str2double(app.Label.Text);
+
+if app.player1score >= 21
+    app.player1turn = 0;
+end
+    %app.over21.m;
+
+    
 end
