@@ -1,12 +1,11 @@
-function dealerPlay(app)
+function dealerPlay(app,dealerturn)
 dealerhits = 0;
-app.numCardsDealt = app.numCardsDealt + 1;
-app.Image2_3.ImageSource = app.shuffledCards{app.numCardsDealt,3}; %replace facedown image (dealer card image 2) with next card in deck
-app.Label_3.Text = num2str(str2double(app.Label_3.Text) + str2double(app.shuffledCards{app.numCardsDealt,2}));
-while 1
+while dealerturn == 1
     app.numCardsDealt = app.numCardsDealt + 1;
+    app.Image2_3.ImageSource = app.shuffledCards{app.numCardsDealt,3}; %replace facedown image (dealer card image 2) with next card in deck
     app.Label_3.Text = num2str(str2double(app.Label_3.Text) + str2double(app.shuffledCards{app.numCardsDealt,2}));
-    
+    %if else structure for dealer score
+
     switch dealerhits
         case 0
             app.Image3_3.Visible = 'on'; %card image turns on
@@ -31,7 +30,6 @@ while 1
         dealerhits = dealerhits + 1;
     elseif (score3 >= 17)
         app.dealerturn = 0;
-        break
     else
         app.ErrorLabel.Visible = 'on';
     end
