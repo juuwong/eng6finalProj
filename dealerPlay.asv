@@ -1,0 +1,3 @@
+function dealerPlay(app)
+if (app.dealerTurn = 1)
+    

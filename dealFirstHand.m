@@ -5,6 +5,8 @@ if(app.numPlayers == 1)
     % Dealer Hand
     app.Image_3.ImageSource = "faceDownCard.png";
     app.Image2_3.ImageSource = app.shuffledCards{1,3};
+    app.Label_3.Text = num2str(str2double(app.shuffledCards{2,2}) + str2double(app.shuffledCards{3,2}));
+
     %Player 1
     app.Image.ImageSource = app.shuffledCards{2,3};
     app.Image2.ImageSource = app.shuffledCards{3,3};
