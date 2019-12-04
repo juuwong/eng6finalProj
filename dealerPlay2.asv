@@ -9,8 +9,8 @@ while dealerturn == 1
         %if else structure for dealer score
         app.score3 = str2double(app.Label_3.Text)
     elseif app.score3 >= 17
-           app.dealerturn = 0;
-           break
+       
+        app.dealerturn = 0;
     else
         app.ErrorLabel.Visible = 'on';
     end
@@ -21,9 +21,8 @@ while dealerturn == 1
         app.Image3_3.ImageSource = app.shuffledCards{app.numCardsDealt,3}; %adds image for 3rd card
         app.score3 = str2double(app.Label_3.Text)
     elseif app.score3 >= 17
-        
+        app.score3 = str2double(app.Label_3.Text)
         app.dealerturn = 0;
-        break
     else
         app.ErrorLabel.Visible = 'on';
     end
@@ -35,9 +34,8 @@ while dealerturn == 1
             app.Image4_3.ImageSource = app.shuffledCards{app.numCardsDealt,3}; %adds image for 4th card
             app.score3 = str2double(app.Label_3.Text)
     elseif score >= 17
-        
+        app.score3 = str2double(app.Label_3.Text)
         app.dealerturn = 0;
-        break
     else
         app.ErrorLabel.Visible = 'on';
     end 
@@ -48,9 +46,8 @@ while dealerturn == 1
         app.Image5_3.ImageSource = app.shuffledCards{app.numCardsDealt,3}; %adds image for 5th card
         app.score3 = str2double(app.Label_3.Text)
     elseif score >= 17
-        
+        app.score3 = str2double(app.Label_3.Text)
         app.dealerturn = 0;
-        break
     else
         app.ErrorLabel.Visible = 'on';
     end 
@@ -62,9 +59,8 @@ while dealerturn == 1
         app.Image6_3.ImageSource = app.shuffledCards{app.numCardsDealt,3}; %adds image for 6th card
         app.score3 = str2double(app.Label_3.Text)
     elseif score >= 17
-        
+        app.score3 = str2double(app.Label_3.Text)
         app.dealerturn = 0;
-        break
     else
         app.ErrorLabel.Visible = 'on';
     end 
