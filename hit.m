@@ -24,11 +24,11 @@ if (app.player2turn == 1)
         app.player2turn = 1;
     elseif score2==21
         app.player2turn=0;
-        dealerPlay(app,1)
+        dealerPlay(app)
         %fprintf("Blackjack!")
     elseif score2>21
         app.player2turn = 0;
-        dealerPlay(app,1)
+        dealerPlay(app)
     else
         app.ErrorLabel.Visible = 'on';
     end
