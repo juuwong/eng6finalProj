@@ -1,23 +1,50 @@
 function updateBalanceTest(app)
-if(app.numPlayers == 1)
+% this code runs always since default there is at least one player
+    
+    % if plr 1 gets busts
+    if(str2double(app.Label.Text) > 21)
+        app.Bet1EditField.Value = 0;
     % if dealer busts & plyr1 under 21
-    if(str2double(app.Label_3.Text) > 21 && str2double(app.Label.Text) <= 21) 
-        app.Balance1EditField.Value = app.Balance1EditField.Value + (2 * app.Bet1EditField.Value);
-    % dealer under 21 and player under 21    
-    elseif(str2double(app.Label_3.Text) <= 21 && str2double(app.Label.Text) <= 21)
-        % plr 1 hand greater than dealer
-        if(str2double(app.Label.Text) > str2double(app.Label_3.Text))
+    elseif(str2double(app.Label_3.Text) > 21 && str2double(app.Label.Text) <= 21) 
             app.Balance1EditField.Value = app.Balance1EditField.Value + (2 * app.Bet1EditField.Value);
-        % plyr 1 hand less than dealer
-        elseif(str2double(app.Label.Text) < str2double(app.Label_3.Text))
+        % dealer under 21 and player under 21    
+    elseif(str2double(app.Label_3.Text) <= 21 && str2double(app.Label.Text) <= 21)
+            % plr 1 hand greater than dealer
+            if(str2double(app.Label.Text) > str2double(app.Label_3.Text))
+                app.Balance1EditField.Value = app.Balance1EditField.Value + (2 * app.Bet1EditField.Value);
+            % plyr 1 hand less than dealer
+            elseif(str2double(app.Label.Text) < str2double(app.Label_3.Text))
+                % nothing should happen to the balance, just lose their bet
+                app.Balance1EditField.Value = app.Balance1EditField.Value;
+                app.Bet1EditField.Value = 0;
+            elseif(str2double(app.Label.Text) == str2double(app.Label_3.Text))
+                % kinda redundant, but nothing should happen to the balance if
+                % they have the same hand
+                app.Balance1EditField.Value = app.Balance1EditField.Value;
+            end
+    end
+    
+    if(app.numPlayers == 2)
+        if(str2double(app.Label_2.Text) == 21)
+            app.Balance2EditField.Value = app.Balance2EditField.Value + (2.5 * app.Bet2EditField.Value);
+        elseif(str2double(app.Label_3.Text) > 21 && str2double(app.Label_2.Text) <= 21) 
+        app.Balance1EditField.Value = app.Balance1EditField.Value + (2 * app.Bet1EditField.Value);
+    % dealer under 21 and player 2 under 21    
+        elseif(str2double(app.Label_3.Text) <= 21 && str2double(app.Label_2.Text) <= 21)
+        % plr 2 hand greater than dealer
+            if(str2double(app.Label_2.Text) > str2double(app.Label_3.Text))
+            app.Balance1EditField.Value = app.Balance1EditField.Value + (2 * app.Bet1EditField.Value);
+        % plyr 2 hand less than dealer
+            elseif(str2double(app.Label_2.Text) < str2double(app.Label_3.Text))
             % nothing should happen to the balance, just lose their bet
-            app.Balance1EditField.Value = app.Balance1EditField.Value;
-            app.Bet1EditField.Value = 0;
-        elseif(str2double(app.Label.Text) == str2double(app.Label_3.Text))
+            app.Balance2EditField.Value = app.Balance2EditField.Value;
+            app.Bet2EditField.Value = 0;
+            elseif(str2double(app.Label_2.Text) == str2double(app.Label_3.Text))
             % kinda redundant, but nothing should happen to the balance if
             % they have the same hand
-            app.Balance1EditField.Value = app.Balance1EditField.Value;
+            app.Balance2EditField.Value = app.Balance2EditField.Value;
+            end
         end
     end
-end
+
 end
