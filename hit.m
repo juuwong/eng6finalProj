@@ -11,6 +11,9 @@ if (app.player1turn == 1)
         %fprintf("Blackjack!")
     elseif score1>21
         app.player1turn = 0;
+        % Enable player 2's buttons if player 1 busts
+        app.HitButton_2.Enable = 'on';
+        app.StandButton_2.Enable = 'on';
     else
         app.ErrorLabel.Visible = 'on';
     end
