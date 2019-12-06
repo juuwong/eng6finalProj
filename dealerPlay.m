@@ -35,7 +35,12 @@ while 1
     else
         app.ErrorLabel.Visible = 'on';
     end
-end
-
     
+end
+  
+% update the balance once the dealer plays, calling another function
+updateBalanceTest(app);
+
+% Show the playAgain Button
+playAgain(app);
 end
