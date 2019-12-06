@@ -44,4 +44,15 @@ function updateBalanceTest(app)
                 app.Balance2EditField.Value = app.Balance2EditField.Value;
             end
     end
+    %update variable balances for all 1-player and 2-player cases since
+%balance1 and balance2 are carried over to the StartScreen2 
+switch app.numPlayers
+    case 1
+        balance1 = app.Balance1EditField.Value;
+    case 2
+        balance1 = app.Balance1EditField.Value;
+        balance2 = app.Balance2EditField.Value;
+    otherwise
+        app.ErrorLabel.Visible = 'on';        
+end
 end
